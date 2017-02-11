@@ -1,0 +1,1 @@
+This is an introductory project for Angular JS.
