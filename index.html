@@ -7,7 +7,7 @@
 	</head>
 	<body class="list-group" ng-controller="StoreController as store">
 		<!-- Product Container -->
-		<div class="list-group-item" ng-repeat="product in store.products">
+		<div class="list-group-item" ng-repeat="product in store.products | orderBy:'price'">
 			<h3>
 				{{product.name}}
 				<em class="pull-right">{{ product.price | currency }} </em>
@@ -40,7 +40,7 @@
 				</ul>
 				<div class="panel" ng-show="panel.isSelected(1)">
 					<h4>Description </h4>
-					<p>{{product.description}}</p>
+					<blockquote>{{product.description}}</blockquote>
 				</div>
 			</section>
 		</div>

@@ -21,7 +21,7 @@
 			description: 'This gem has a mysterious blue glow that comes from a \
 			steady surge of energy',
 			shine: 9,
-			price: 22.90,
+			price: 48.90,
 			rarity: 6,
 			color: '#EEE',
 			faces: 12,
@@ -37,7 +37,7 @@
 			description: 'Some gems have hidden qualities beyond their luster, \
 			beyond their shine...Dodeca is one of those gems.',
 			shine: 70,
-			price: 2.95,
+			price: 27.95,
 			rarity: 2,
 			color: '#000',
 			faces: 6,
