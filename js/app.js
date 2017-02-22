@@ -1,9 +1,21 @@
 (function() {
 	var app = angular.module('store', [ ]);
-
+	
+	app.controller('GalleryController', function() {
+    	 this.current = 0;
+	    this.setCurrent = function(value) {
+	      	if (!value) { 
+	      		this.current = 0; } 
+	      	else {
+	        	this.current = value;
+	      	}
+	    };
+  	});
+	
 	app.controller('StoreController', function() {
 		this.products = gems;
 	});
+	
 	app.controller('PanelController', function() {
 		this.tab = 1;
 
@@ -25,11 +37,21 @@
 			rarity: 6,
 			color: '#EEE',
 			faces: 12,
-			images: [
-			  
-			],
+			images: [ ],
 			canPurchase: true,
 			soldOut: false,
+			reviews: [
+				{
+					stars: 5,
+					body: "This is pretty cool!",
+					author:  "joe@blogg.com"
+				},
+				{
+					stars: 1,
+					body: "Not feelin it",
+					author:  "nick@hater.net"
+				}
+			]
 		},
 		{
 			name: 'Dodecahedron',
@@ -48,6 +70,18 @@
 			],
 			canPurchase: true,
 			soldOut: false,
+			reviews: [
+				{
+					stars: 4,
+					body: "Not sure about the price",
+					author:  "abby@retail.com"
+				},
+				{
+					stars: 2,
+					body: "Questionable",
+					author:  "luke@sky.net"
+				}
+			]
 
 		},
 		{
@@ -66,6 +100,7 @@
 			],
 			canPurchase: true,
 			soldOut: false,
+			reviews: [ ]
 		}
 	];
 

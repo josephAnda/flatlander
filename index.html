@@ -14,12 +14,9 @@
 			</h3>
 
 			<!-- Image Gallery -->
-			<div class="gallery" ng-show="product.images.length">
-				<div class="img-wrap">
-					<img ng-src="{{product.images[0]}}" />
-				</div>
-		
-				<ul class="img-thumbnails clearfix">
+			<div class="gallery" ng-controller="GalleryController as gallery" ng-show="product.images.length">
+				<img ng-src="{{product.images[gallery.current]}}" />
+				<ul class="list-inline thumbs">
 					<li ng-repeat="image in product.images" class="small-image pull-left thumbnail" >
 						<img ng-src="{{image}}" />
 					</li>
